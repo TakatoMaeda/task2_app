@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Task2App</title>
+    <title>Calender</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +10,15 @@
     <%= javascript_importmap_tags %>
   </head>
 
+  
+  <header>
+    <h1>Ruby on Rails スケジュール管理アプリ</h1>
+  </header>
   <body>
-    <%= yield %>
+  <%= yield %>
   </body>
+  <footer>
+    <h1>現在の日付:<%= Date.current.strftime('%Y年 %m月 %d日') %></h1>
+    <h3>スケジュールの合計:<%= Post.all.count %></h3>
+  </footer>
 </html>
